@@ -190,6 +190,13 @@ Ingrese algun texto que desea encriptar o desencriptar
         background-image: none;
         background-color: var(--Color-fondo-gif);
     }
+    .logo{
+        margin: 1rem;
+        top: -100px;
+        left: -70px;
+        z-index: 99;
+        opacity: 100%;
+    }
     .Contenedor_Principal{
         display: flex;
         flex-direction: row;
