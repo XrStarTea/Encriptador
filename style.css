@@ -1,0 +1,232 @@
+:root {
+    --Fondo-Blanco: #FFFFFF;
+    --Fondo-Negro: #000000 ;
+    --Color-fondo-gif: #2c2c2c;
+    --Color-animado-btn: #FFFFFF;
+}
+/*establecemos variables*/
+*{
+    margin: 0%;
+    padding: 0%;
+}
+/*establecemos valores predeterminados*/
+
+body{
+    background-image: url(img/Fondo.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+    background-attachment: fixed;
+    background-color: var(--Color-fondo-gif);
+}
+/*Configuramos el fondo*/
+.logo{
+    position: absolute;
+    border: none;
+    width: 200px;
+    height: 200px;
+    clip-path: inset(10% 20% 20% 20%);
+    top: -80px;
+    left: 60px;
+    opacity: 80%;
+}
+/*Configuramos el logo de alura*/
+.Contenedor_Principal{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.Ingreso_de_texto{
+    position: absolute;
+    width: 40%;
+    height: 60%;
+    left: 15%;
+    top: 10%;
+    border: none;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    background-color: transparent;
+    border: var(--Fondo-Blanco) 5px solid;
+    border-radius: 40px;
+    color: var(--Fondo-Blanco); /*color de cuando escribimos*/
+    padding: 15px; /*orientacion de donde se colocara el texto*/
+    resize: none; /*Quitamos el simbolo redimensionador que habia en la esquina*/
+}
+/*Configuramos el lugar donde queremos que se poscicione nuestro texto, y colocamos bonus de color al escribir*/
+.Ingreso_de_texto::placeholder{
+    color: var(--Fondo-Blanco);
+    text-shadow: 2px 3px 3px var(--Color-fondo-gif);
+    opacity: 70%;
+}
+/*Configuramos color de "ingrese texto"*/
+.Ingreso_de_texto:focus,
+.Ingreso_de_texto:active{
+    outline: none;
+}
+/*quitamos borde al hacer click*/
+.Aviso{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    width: 80%;
+    left: 15%;
+    top: 77%;
+    position: absolute;
+    color: var(--Fondo-Blanco);
+    opacity: 70%;
+}
+/*Configuramos el aviso*/
+.Botones{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 1% 0;
+    position: absolute;
+    width: 80%;
+    top: 80%;
+    left: 15%;
+    gap: 50px;
+}
+/*Posicionamos botones*/
+.Boton_encriptar{
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 10px;
+    width: 20%;
+    background-color: transparent;
+    color: var(--Fondo-Blanco);
+    opacity: 75%;
+    border-radius: 25px;
+    font-family: "Inter";
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    border: 2px solid var(--Fondo-Blanco) ;
+}
+/*Decoramos boton de encriptar*/
+.Boton_desencriptar{
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 10px;
+    width: 20%;
+    background-color: transparent;
+    color: var(--Fondo-Blanco);
+    opacity: 75%;
+    border-radius: 25px;
+    font-family: "Inter";
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    border: 2px solid var(--Fondo-Blanco) ;
+}
+/*Decoramos boton de desencriptar*/
+.Boton_encriptar:hover,
+.Boton_desencriptar:hover{
+    color: var(--Color-fondo-gif);
+}
+/*Cambia de color el texto al colocar mouse encima*/
+.Boton_encriptar:hover,
+.Boton_desencriptar:hover{
+    background: var(--Color-animado-btn);
+    box-shadow: 0 0 10px var(--Color-animado-btn), 0 0 40px var(--Color-animado-btn), 0 0 80px var(--Color-animado-btn);
+    border: 2px solid var(--Color-animado-btn);
+}
+/*animamos con efecto neon al boton cuando el mouse este encima*/
+/*---------------------------------------------------------------------------------*/
+/*class="Resultado">
+<img src="img/Muñeco.png" alt="" id="muneco">
+<div class="Mensaje_encriptado" id="Mensaje_encriptado">
+<h2 id="Mensaje_resultado">
+Ningun mensaje encontrado
+</h2>
+<p>
+Ingrese algun texto que desea encriptar o desencriptar
+</p>*/
+.Resultado img{
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    top: 10%;
+    opacity: 90%;
+}
+/*Cambiamos posicionamiento y tamaño imagen*/
+.Resultado{
+    color: var(--Fondo-Blanco);
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    width: 25%;
+    height: 85%;
+    top: 10%;
+    left: 60%;
+    border-radius: 40px;
+    border: 5px solid var(--Fondo-Blanco) ;
+}
+/*Configuramos cuadro de resultados*/
+.Mensaje_encriptado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    gap: 16px;
+    position: absolute;
+    width: 100%;
+    top: 65%;
+    text-align: center;
+}
+/*Posicionamos el texto del cuadro de resultados*/
+
+/*Responsividad*/
+@media (max-width: 1024px){
+    body{
+        background-image: none;
+        background-color: var(--Color-fondo-gif);
+    }
+    .Contenedor_Principal{
+        display: flex;
+        flex-direction: row;
+    }
+    .Ingreso_de_texto{
+        width: 60%;
+        height: 30%;
+        font-style: "Inter";
+        font-size: 20px;
+    }
+    .Aviso{
+        width: 74%;
+        top: 320px;
+    }
+    .Botones{
+        top: 370px;
+        gap: 5px;
+    }
+    .Boton_encriptar,
+    .Boton_desencriptar{
+        font-style: "Inter";
+        font-size: 12px;
+        width: 50%;
+        height: 40px;
+    }
+    .Resultado{
+        left: 15%;
+        top: 65%;
+        width: 68%;
+        height: 25%;
+    }
+    .Resultado img{
+        visibility: hidden;
+    }
+    .Mensaje_encriptado{
+        top: 5px;
+        font-style: "Inter";
+        font-size: 15px;
+    }
+}
