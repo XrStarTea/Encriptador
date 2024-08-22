@@ -157,6 +157,14 @@ Ingrese algun texto que desea encriptar o desencriptar
     top: 10%;
     opacity: 90%;
 }
+.posicion_texto{
+    position: fixed;
+    top: 90px;
+    width: 22%;
+    height: 63%;
+    word-wrap: break-word;
+    overflow-y: scroll;
+}
 /*Cambiamos posicionamiento y tamaño imagen*/
 .Resultado{
     color: var(--Fondo-Blanco);
@@ -185,9 +193,11 @@ Ingrese algun texto que desea encriptar o desencriptar
 }
 /*Posicionamos el texto del cuadro de resultados*/
 .bttn-copiar{
-    padding: 2%;
+    position: absolute;
+    top: 230%;
+    padding: 3%;
     gap: 10px;
-    width: 200px;
+    width: 250px;
     background-color: transparent;
     color: var(--Fondo-Blanco);
     opacity: 75%;
@@ -195,7 +205,6 @@ Ingrese algun texto que desea encriptar o desencriptar
     font-family: "Inter";
     font-size: 15px;
     line-height: 20px;
-    text-align: center;
     border: 2px solid var(--Fondo-Blanco) ;
     cursor: pointer;
 }
@@ -207,13 +216,12 @@ Ingrese algun texto que desea encriptar o desencriptar
     color: var(--Color-fondo-gif);
 }
 /*animamos boton de copiar al pasar el mouse por encima*/
-/*.ocultar{
-    display:none;
-}*/
-.mostrar{
-    display: block;
+.ocultar{
+    visibility: hidden;
 }
-
+.mostrar{
+    visibility: visible;
+}
 /*Ocultar y mostrar boton de copiar junto con la imagen*/
 /*Responsividad*/
 @media (max-width: 1024px){
@@ -266,5 +274,17 @@ Ingrese algun texto que desea encriptar o desencriptar
         top: 5px;
         font-style: "Inter";
         font-size: 15px;
+    }
+    .bttn-copiar{
+        width: 80%;
+        top: 200%;
+    }
+    .posicion_texto{
+        position: fixed;
+        top: 68%;
+        width: 60%;
+        height: 15%;
+        word-wrap: break-word;
+        overflow-y: scroll;
     }
 }/*Cambios en la posicion de vista en celular*/
