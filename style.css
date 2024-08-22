@@ -185,8 +185,6 @@ Ingrese algun texto que desea encriptar o desencriptar
 }
 /*Posicionamos el texto del cuadro de resultados*/
 .bttn-copiar{
-    align-items: center;
-    justify-content: center;
     padding: 2%;
     gap: 10px;
     width: 200px;
@@ -209,10 +207,10 @@ Ingrese algun texto que desea encriptar o desencriptar
     color: var(--Color-fondo-gif);
 }
 /*animamos boton de copiar al pasar el mouse por encima*/
-ocultar{
+/*.ocultar{
     display:none;
-}
-mostrar{
+}*/
+.mostrar{
     display: block;
 }
 
