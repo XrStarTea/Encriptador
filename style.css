@@ -10,7 +10,6 @@
     padding: 0%;
 }
 /*establecemos valores predeterminados*/
-
 body{
     background-image: url(img/Fondo.gif);
     background-repeat: no-repeat;
@@ -108,6 +107,7 @@ body{
     line-height: 20px;
     text-align: center;
     border: 2px solid var(--Fondo-Blanco) ;
+    cursor: pointer;
 }
 /*Decoramos boton de encriptar*/
 .Boton_desencriptar{
@@ -125,6 +125,7 @@ body{
     line-height: 20px;
     text-align: center;
     border: 2px solid var(--Fondo-Blanco) ;
+    cursor: pointer;
 }
 /*Decoramos boton de desencriptar*/
 .Boton_encriptar:hover,
@@ -183,7 +184,39 @@ Ingrese algun texto que desea encriptar o desencriptar
     text-align: center;
 }
 /*Posicionamos el texto del cuadro de resultados*/
+.bttn-copiar{
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    gap: 10px;
+    width: 200px;
+    background-color: transparent;
+    color: var(--Fondo-Blanco);
+    opacity: 75%;
+    border-radius: 25px;
+    font-family: "Inter";
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    border: 2px solid var(--Fondo-Blanco) ;
+    cursor: pointer;
+}
+/*decoramos boton de copiar*/
+.bttn-copiar:hover{
+    background: var(--Color-animado-btn);
+    box-shadow: 0 0 10px var(--Color-animado-btn), 0 0 40px var(--Color-animado-btn), 0 0 80px var(--Color-animado-btn);
+    border: 2px solid var(--Color-animado-btn);
+    color: var(--Color-fondo-gif);
+}
+/*animamos boton de copiar al pasar el mouse por encima*/
+ocultar{
+    display:none;
+}
+mostrar{
+    display: block;
+}
 
+/*Ocultar y mostrar boton de copiar junto con la imagen*/
 /*Responsividad*/
 @media (max-width: 1024px){
     body{
@@ -236,4 +269,4 @@ Ingrese algun texto que desea encriptar o desencriptar
         font-style: "Inter";
         font-size: 15px;
     }
-}
+}/*Cambios en la posicion de vista en celular*/

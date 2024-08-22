@@ -1,17 +1,19 @@
-function Funcion_Encriptar(){
-    let texto=document.querySelector("#Ingreso_de_texto")
-    if(texto.value === ""){
-        alert("ingrese texto a encriptar")
-    }
-    for (let i = 0; i < texto.length; i++) {
-    }
-    let nuevo_texto = ""
-    nuevo_texto = texto.value.replace('a','test')
-    texto.innerHTML=""
-    texto.value=""
-    texto.value=nuevo_texto
-    texto.innerText= nuevo_texto;
-    console.log(texto);
-    
-    
+let texto=document.querySelector("#Ingreso_de_texto");
+let esconder=document.querySelector("#bttn-copiar");
+//nuevo_texto
+esconder.classList.add("ocultar")
+//variables
+function Funcion_Encriptar(text){
+    .trim()
+    .toLowerCase()
+    .replaceALL("a"."hjg");
+    .replaceALL("e"."dsa");
+    .replaceALL("i"."fds");
+    .replaceALL("o"."ajk");
+    .replaceALL("u"."eip");
+    return nuevo_texto;
+}
+//reemplazamos los valores que ingresamos
+Boton_encriptar.addEventListener("click",(e)=>{
+    texto_modificar = encriptar(texto.value)
 }
